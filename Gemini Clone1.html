@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    
+
+    
+    <link rel="icon" type="image/svg+xml" href="http://localhost:5173/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Clone</title>
+    <script type="module" crossorigin="" src="./Gemini Clone1_files/index-CReThPys.js.download"></script>
+    <link rel="stylesheet" crossorigin="" href="./Gemini Clone1_files/index-T0--RNUp.css">
+  <style type="text/css" data-vite-dev-id="C:/Users/HP/Desktop/gemini-clone/src/components/Sidebar/Sidebar.css">.sidebar{
+    min-height: 100vh;
+   
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 25px 15px;
+}
+
+.sidebar img{
+    width: 20px;
+   
+}
+
+.sidebar .menu{
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sidebar .new-chat{
+     margin-top: 50px;
+     display: inline-flex;
+     align-items: center;
+     gap: 10px;
+     padding: 10px 15px;
+     background-color: #e6eaf1;
+     border-radius: 50px;
+     font-size: 14px;
+     color: grey;
+     cursor: pointer;
+
+}
+
+.sidebar .recent{
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.5s;
+}
+
+.sidebar .recent-title{
+     margin-top: 30px;
+     margin-bottom: 20px;
+     
+}
+.sidebar .bottom-item{
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.sidebar .recent-entry{
+        display: flex;
+        align-items: start;
+        gap: 10px;
+        padding: 10px 40px 10px 10px;
+        border-radius: 50px;
+        color: #282828;
+        cursor: pointer;
+}
+.sidebar .recent-entry:hover{
+    background-color: #e2e6eb;
+}
+
+.sidebar .bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (max-width:600px){
+    .sidebar{
+        display: none;
+    }
+}
+
+
+</style><style type="text/css" data-vite-dev-id="C:/Users/HP/Desktop/gemini-clone/src/components/Main/Main.css">.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+}
+
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+}
+
+.main .nav img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.main .greet {
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c4c5;
+    font-weight: 500;
+    padding: 20px;
+}
+
+.main .greet span {
+    background: linear-gradient(16deg, #4b90ff, #ff4456);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* For older versions of Safari */
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: #f0f4f9;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.main .card img {
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p {
+    color: #585858;
+    font-size: 17px;
+}
+
+.main .card:hover {
+    background-color: #dfe4ea;
+}
+
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.search-box img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.search-box div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .bottom-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+.result {
+    padding: 0px 5%;
+    max-height: 70vh;
+    overflow: scroll;
+}
+
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.result-title {
+    margin: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result img {
+    width: 40px;
+    border-radius: 50px;
+}
+
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr {
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+}
+
+@keyframes loader {
+    0% {
+        background-position: -800px 0px;
+    }
+    100% {
+        background-position: 800px 0px;
+    }
+}
+
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+    .main-bottom input {
+        flex: none;
+        width: 150px;
+    }
+    .main-bottom img {
+        width: 20px;
+    }
+    .search-box {
+        padding: 5px 10px;
+    }
+    .search-box div {
+        gap: 5px;
+    }
+}
+</style><style type="text/css" data-vite-dev-id="C:/Users/HP/Desktop/gemini-clone/src/index.css">@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+}
+div{
+  display: block;
+  unicode-bidi: isolate;
+}
+#root{
+  min-height: 100vh;
+  display: flex;
+  animation: fadeIn 1.5s;
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+</style></head>
+  <body>
+    <div id="root"><div class="sidebar"><div class="top"><img class="menu" src="./Gemini Clone1_files/menu_icon.png" alt=""><div class="new-chat"><img src="./Gemini Clone1_files/plus_icon.png" alt=""></div></div><div class="bottom"><div class="bottom-item recent-entry"><img src="./Gemini Clone1_files/question_icon.png" alt=""></div><div class="bottom-item recent-entry"><img src="./Gemini Clone1_files/history_icon.png" alt=""></div></div></div><div class="main"><div class="nav"><p>Gemini</p><img src="./Gemini Clone1_files/user_icon.png" alt=""></div><div class="main-container"><div class="greet"><p><span>Hello, Dev.</span></p><p>How can I help you today?</p></div><div class="cards"><div class="card"><p>Suggest beautiful places to see on upcoming road trip</p><img src="./Gemini Clone1_files/compass_icon.png" alt=""></div><div class="card"><p>Briefly summarize this concept: urban planning</p><img src="./Gemini Clone1_files/bulb_icon.png" alt=""></div><div class="card"><p>Brainstorm team bonding activities for our work retreat</p><img src="./Gemini Clone1_files/message_icon.png" alt=""></div><div class="card"><p>Improve the readability of the following code</p><img src="./Gemini Clone1_files/code_icon.png" alt=""></div></div><div class="main-bottom"><div class="search-box"><input type="text" placeholder="Enter a prompt here" value="" fdprocessedid="56sjrj"><div><img src="./Gemini Clone1_files/gallery_icon.png" alt=""><img src="./Gemini Clone1_files/mic_icon.png" width="30" alt=""></div></div><p class="bottom-info">Gemini may display inaccurate information, including about people, so double-check its responses. Your privacy and Gemini Apps</p></div></div></div></div>
+    <script type="module" src="./Gemini Clone1_files/main.jsx"></script>
+  
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
